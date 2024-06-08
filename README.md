@@ -90,18 +90,18 @@ Back on my Virtual Machine, I’ve turned the firewalls off just to make it susc
 
 <p align="center">
 Ping: <br/>
-I’ve left the VM and opened up a terminal on my macbook to start pinging requests to confirm if the VM is accessible through the internet. did have to reconfigure my security inbound rule settings on azure and extend the port range to allow ICMP traffic to my honeypot vm.<br/>
+I’ve opened up a terminal on my macbook to start pinging requests to confirm if the VM is accessible through the internet. I did have to reconfigure my security inbound rule settings on azure to extend the port range which allowed ICMP traffic into my honeypot vm.<br/>
 <img src="https://i.imgur.com/Dmp7CLM.jpeg" alt="Azure Sentinel Map with Live Cyber Attacks"/>
 
 <p align="center">
 Downloading Powershell Script and Getting Geolocation API Key: <br/>
-This is the powershell script that I’ve downloaded. I’ve sourced this from Github but used my own API key from Ipgeolocation (this was attained by making an account with ipgeolocation). The API key is simply used  to attain location data e.g latitude, longitude, country location information. .<br/>
+This is the powershell script that I’ve downloaded. I’ve sourced this from Github but used my own API key from Ipgeolocation (this was attained by making an account with ipgeolocation). The API key is simply used to attain location data e.g latitude, longitude, country location information. .<br/>
 <img src="https://i.imgur.com/nwUllzQ.jpeg" alt="Azure Sentinel Map with Live Cyber Attacks"/>
 
 
 <p align="center">
 Run script to get Geo data from attackers: <br/>
-Now that I have my API key and Powershell script. I’ve gone back to my virtual machine and opened up Windows Powershell ISE and run the script. When the script is running, it will look through the event security logs and will grab all the events of people who failed to login to the VM and will grab their IP addresses and will use the geodata to create a new log file.<br/>
+Now that I have my API key and Powershell script, I’ve gone back to my virtual machine and opened up Windows Powershell ISE and run the script. When the script is running, it will look through the event security logs and will grab all the events of people who failed to login to the VM and will grab their IP addresses and will use the geodata to create a new log file.<br/>
 <img src="https://i.imgur.com/Zkh4Vwq.jpeg" alt="Azure Sentinel Map with Live Cyber Attacks"/>
 
 <p align="center">
