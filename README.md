@@ -50,26 +50,26 @@ Creating Network Security Group: <br/>
 <br>In my Virtual Machine, I’ve set my inbound rules in a way that it is open for everything to the public internet. Protocol is set to any and action is made allow therefore enabling all traffic from the internet with a low priority setting. This is going to essentially allow traffic from the internet to my Virtual Machine enticing attackers to attempt access to the VM.<br>
   
 
-<img src="https://i.imgur.com/TKV1pxU.png" height="80%" width="80%" alt="Azure Sentinel Map with Live Cyber Attacks"/>
+<img src="https://i.imgur.com/TKV1pxU.png" alt="Azure Sentinel Map with Live Cyber Attacks"/>
 
 <p align="center">
 Setting up Log Analytics Workspace: <br/>
 Whilst my VM is being deployed, I will be creating my log analytics workspace. The purpose of this is to ingest logs from my VM (the windows event logs) into the workspace. I am also going to create my own custom log that will contain geographic information that discovers where the attackers are coming from.<br/>
 
-<img src="https://i.imgur.com/ufPezUD.png" height="80%" width="80%" alt="Azure Sentinel Map with Live Cyber Attacks"/>
+<img src="https://i.imgur.com/ufPezUD.png" alt="Azure Sentinel Map with Live Cyber Attacks"/>
 
 <p align="center">
 Gathering VM Logs: <br/>
 My next step is enabling the gathering of VM logs in the Security Center. I’ve done this by turning Microsoft Defender on to give me an enhanced view of the security posture of my VM. Data collection rules were also created to collect all security events and logs and to be saved and logged in my log analytics workspace. This will be used later<br>
-<img src="https://i.imgur.com/ufPezUD.png" height="80%" width="80%" alt="Azure Sentinel Map with Live Cyber Attacks"/>
-<img src="https://i.imgur.com/KiR7nWC.jpeg" height="80%" width="80%" alt="Azure Sentinel Map with Live Cyber Attacks"/>
+<img src="https://i.imgur.com/ufPezUD.png"  alt="Azure Sentinel Map with Live Cyber Attacks"/>
+<img src="https://i.imgur.com/KiR7nWC.jpeg"  alt="Azure Sentinel Map with Live Cyber Attacks"/>
 
 <p align="center">
 Observing Event Viewer logs in VM: <br/>
 I’ve logged in to my virtual machine via remote desktop using the public IP shown in the overview of my honeypot vm. Before logging into the VM, I’ve purposely made some failed login attempts which will be observed in the event viewer. This is because I will gain a better understanding of how my security logs will work and be able to use the ip addresses and the geodata produced from the failed login attempts to create a custom log which will be sent to my log analytics workspace to be used on sentinel that I will further use to plot data points of failed RDP logins on a world map.  <br/>
 
-<img src="https://i.imgur.com/fcRAbfp.jpeg" height="80%" width="80%" alt="Azure Sentinel Map with Live Cyber Attacks"/>
-<img src="https://i.imgur.com/UOH2TCW.jpeg" height="80%" width="80%" alt="Azure Sentinel Map with Live Cyber Attacks"/>
+<img src="https://i.imgur.com/fcRAbfp.jpeg" alt="Azure Sentinel Map with Live Cyber Attacks"/>
+<img src="https://i.imgur.com/UOH2TCW.jpeg"  alt="Azure Sentinel Map with Live Cyber Attacks"/>
 
 
 <p align="center">
