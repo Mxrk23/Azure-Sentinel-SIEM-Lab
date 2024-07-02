@@ -8,11 +8,11 @@ In this project, I will be walking through how I set up Microsoft Azure Sentinel
 
 <h2>Overview</h2>
 
-- Create a VM in Azure. I will turn the external firewall off and the windows firewall off to make it exposed to the internet and allow anyone in any country to ping the VM. I'm doing this to entice attackers and and for it to be discovered really quickly
+- Create a VM in Azure. I will turn the external firewall off and the windows firewall off to make it exposed to the internet and allow anyone in any country to ping the VM. I'm doing this to entice attackers and for it to be discovered quickly.
 
 - Create a log repository in Azure (Log analytics Workspace). I will use this to ingest the logs from the virtual machine
   
-- Setup Azure Sentinel (SIEM). I'm going to use this to create a map that will show all the attackers data e.g what regions  the attackers are coming from.
+- Setup Azure Sentinel (SIEM). I'm going to use this to create a map that will show all the attackers data e.g what regions the attacks are coming from.
 
 - Use Powershell to transform logs between the VM and log repository. Powershell will be used to extract IP addresses from the windows log to a third party API (I will be using Ipgeolocation). This API will derive the geographic  information (e.g latitude, longitude, state, country) which will be sent back to my Virtual machine which will then use it to create a custom log with geographic data.
 
