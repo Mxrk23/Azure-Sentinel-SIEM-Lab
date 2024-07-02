@@ -3,7 +3,7 @@
  
 
 <h2>Description</h2>
-In this project, I will be walking through how I set up Microsoft Azure Sentinel and connected it to a virtual machine with no security configuration essentially acting as a honeypot. I will then monitor and log real live remote desktop brute force attacks from different IP addresses from around the world and will take that data and display it on a world map to show where  the attacks are coming from. I will use a powershell script that will look up the attacker’s geolocation data which will be plotted on the Microsoft Sentinel map. My first steps involve setting up an Azure account, a vulnerable virtual machine and a log analytics workspace where all the logs from the virtual machine will be logged and stored. This will all be in the same resource group. Once these first steps are completed, I will create custom logs which will contain the geodata ingested of the attackers.
+In this project, I will be walking through how I set up Microsoft Azure Sentinel and connected it to a virtual machine with no security configuration essentially acting as a honeypot. I will then monitor and log real live remote desktop brute force attacks from different IP addresses from around the world and will display the data on a world map to show where the attacks are coming from. I will use a powershell script that will look up the attacker’s geolocation data which will be plotted on the Microsoft Sentinel map. My first steps involve setting up an Azure account, a vulnerable virtual machine and a log analytics workspace where all the logs from the virtual machine will be logged and stored.
 <br />
 
 <h2>Overview</h2>
